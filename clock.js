@@ -9,13 +9,26 @@ $(document).ready( function() {
 		let minutes = currentTime.getMinutes();
 
 		let seconds = currentTime.getSeconds();
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
 
 		let clockDiv = document.getElementById('clock');
 
-		clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
+		clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+
+
+		let meridiem = "AM";
+			if (hours > 12) {
+				hours = hours - 12;
+				meridiem = "PM";	
+			}
+
+			if (hours === 0) {
+				hours = 12;
+			}
 
 		setInterval(displayTime, 1000);
-
 
 	}
 	
