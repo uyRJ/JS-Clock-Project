@@ -22,7 +22,7 @@ $(document).ready( function() {
 			if (hours > 12) {
 				hours = hours - 12;
 				meridiem = "PM";	
-			}
+			}	
 
 			if (hours === 0) {
 				hours = 12;
@@ -32,7 +32,7 @@ $(document).ready( function() {
 
 	}
 	
-
+	
 	displayTime();
 
 });
