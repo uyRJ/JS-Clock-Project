@@ -13,9 +13,7 @@ $(document).ready( function() {
 				seconds = "0" + seconds;
 			}
 
-		let clockDiv = document.getElementById('clock');
-
-		clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+		
 
 
 		let meridiem = "AM";
@@ -29,7 +27,10 @@ $(document).ready( function() {
 			}
 
 		setInterval(displayTime, 1000);
+		
+		let clockDiv = document.getElementById('clock');
 
+		clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
 	}
 	
 	
